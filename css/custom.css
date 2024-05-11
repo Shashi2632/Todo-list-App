@@ -1,0 +1,103 @@
+/* Import Google Fonts and define global styles */
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300&display=swap');
+
+/* Apply common styling rules to all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merienda', cursive;
+}
+
+/* Define main container styles */
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/todolist.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Styling for the to-do list box */
+.box {
+    width: 482px;
+    min-height: 645px;
+    background-color: #eeeff1;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 45px;
+    margin-right: 15px;
+}
+
+/* Styling for the title */
+.title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    background: #eeeff1;
+}
+
+/* Styling for input field within the title */
+.title input{
+    margin-top: 15px;
+}
+
+/* Styling for the input field */
+#item {
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    display: block;
+    font-weight: bold;
+    box-shadow: 0px 0px 2px grey;
+}
+
+/* Styling for the to-do list container */
+#to-do-box {
+    margin-top: 20px;
+    list-style: none;
+}
+
+/* Styling for individual to-do list items */
+#to-do-box li {
+    position: relative;
+    background-color: rgb(96, 186, 156);
+    color: black;
+    padding: 10px;
+    border-radius: 2px;
+    padding-right: 30px;
+    text-align: justify;
+    margin-top: 10px;
+    user-select: none;
+    font-weight: 600;
+}
+
+/* Alternate background color for odd-indexed list items */
+#to-do-box li:nth-child(odd) {
+    background: #aae4d1;
+}
+
+/* Styling for the delete icon within each list item */
+#to-do-box li i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* Styling for the 'done' class (marked as completed) */
+.done {
+    text-decoration: line-through;
+    color: black;
+    background-color: #95a5a6 !important;
+}
+
+/* Hover effect for the delete icon within completed items */
+.done i:hover {
+    color: red;
+}
